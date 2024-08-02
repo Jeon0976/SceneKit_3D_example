@@ -12,6 +12,7 @@ struct SolarSystemUsingSceneKitApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .buttonStyle(SolarButtonStyle())
         }
     }
 }

@@ -14,6 +14,14 @@
 		C5FBA37B2C5CB7E800FFD636 /* SolarSystemUsingSceneKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA37A2C5CB7E800FFD636 /* SolarSystemUsingSceneKitTests.swift */; };
 		C5FBA3852C5CB7E800FFD636 /* SolarSystemUsingSceneKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA3842C5CB7E800FFD636 /* SolarSystemUsingSceneKitUITests.swift */; };
 		C5FBA3872C5CB7E800FFD636 /* SolarSystemUsingSceneKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA3862C5CB7E800FFD636 /* SolarSystemUsingSceneKitUITestsLaunchTests.swift */; };
+		C5FBA3952C5CBBC700FFD636 /* PlantInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA3942C5CBBC700FFD636 /* PlantInfoRow.swift */; };
+		C5FBA3992C5CBF9400FFD636 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA3982C5CBF9400FFD636 /* ColorPalette.swift */; };
+		C5FBA39C2C5CBFBC00FFD636 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA39B2C5CBFBC00FFD636 /* Planet.swift */; };
+		C5FBA39E2C5CBFCE00FFD636 /* Planet+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA39D2C5CBFCE00FFD636 /* Planet+Info.swift */; };
+		C5FBA3A02C5CC12F00FFD636 /* SolarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA39F2C5CC12F00FFD636 /* SolarButtonStyle.swift */; };
+		C5FBA3A22C5CC19100FFD636 /* ProgressViewWithBackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA3A12C5CC19100FFD636 /* ProgressViewWithBackgroundStyle.swift */; };
+		C5FBA3A42C5CC25C00FFD636 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FBA3A32C5CC25C00FFD636 /* ViewModel.swift */; };
+		C5FBA3A62C5CF4B400FFD636 /* Solar Scene.scn in Resources */ = {isa = PBXBuildFile; fileRef = C5FBA3A52C5CF4B400FFD636 /* Solar Scene.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		C5FBA3802C5CB7E800FFD636 /* SolarSystemUsingSceneKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolarSystemUsingSceneKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FBA3842C5CB7E800FFD636 /* SolarSystemUsingSceneKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemUsingSceneKitUITests.swift; sourceTree = "<group>"; };
 		C5FBA3862C5CB7E800FFD636 /* SolarSystemUsingSceneKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemUsingSceneKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C5FBA3942C5CBBC700FFD636 /* PlantInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoRow.swift; sourceTree = "<group>"; };
+		C5FBA3982C5CBF9400FFD636 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		C5FBA39B2C5CBFBC00FFD636 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		C5FBA39D2C5CBFCE00FFD636 /* Planet+Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Planet+Info.swift"; sourceTree = "<group>"; };
+		C5FBA39F2C5CC12F00FFD636 /* SolarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarButtonStyle.swift; sourceTree = "<group>"; };
+		C5FBA3A12C5CC19100FFD636 /* ProgressViewWithBackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewWithBackgroundStyle.swift; sourceTree = "<group>"; };
+		C5FBA3A32C5CC25C00FFD636 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C5FBA3A52C5CF4B400FFD636 /* Solar Scene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Solar Scene.scn"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +110,12 @@
 		C5FBA3682C5CB7E700FFD636 /* SolarSystemUsingSceneKit */ = {
 			isa = PBXGroup;
 			children = (
+				C5FBA39A2C5CBFAF00FFD636 /* DataModel */,
+				C5FBA3932C5CBBB300FFD636 /* UiView */,
 				C5FBA3692C5CB7E700FFD636 /* SolarSystemUsingSceneKitApp.swift */,
 				C5FBA36B2C5CB7E700FFD636 /* ContentView.swift */,
+				C5FBA3A52C5CF4B400FFD636 /* Solar Scene.scn */,
+				C5FBA3A32C5CC25C00FFD636 /* ViewModel.swift */,
 				C5FBA36D2C5CB7E700FFD636 /* Assets.xcassets */,
 				C5FBA36F2C5CB7E700FFD636 /* Preview Content */,
 			);
@@ -125,6 +145,26 @@
 				C5FBA3862C5CB7E800FFD636 /* SolarSystemUsingSceneKitUITestsLaunchTests.swift */,
 			);
 			path = SolarSystemUsingSceneKitUITests;
+			sourceTree = "<group>";
+		};
+		C5FBA3932C5CBBB300FFD636 /* UiView */ = {
+			isa = PBXGroup;
+			children = (
+				C5FBA3942C5CBBC700FFD636 /* PlantInfoRow.swift */,
+				C5FBA3982C5CBF9400FFD636 /* ColorPalette.swift */,
+				C5FBA39F2C5CC12F00FFD636 /* SolarButtonStyle.swift */,
+				C5FBA3A12C5CC19100FFD636 /* ProgressViewWithBackgroundStyle.swift */,
+			);
+			path = UiView;
+			sourceTree = "<group>";
+		};
+		C5FBA39A2C5CBFAF00FFD636 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5FBA39B2C5CBFBC00FFD636 /* Planet.swift */,
+				C5FBA39D2C5CBFCE00FFD636 /* Planet+Info.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5FBA3A62C5CF4B400FFD636 /* Solar Scene.scn in Resources */,
 				C5FBA3712C5CB7E700FFD636 /* Preview Assets.xcassets in Resources */,
 				C5FBA36E2C5CB7E700FFD636 /* Assets.xcassets in Resources */,
 			);
@@ -257,8 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5FBA3952C5CBBC700FFD636 /* PlantInfoRow.swift in Sources */,
+				C5FBA3A42C5CC25C00FFD636 /* ViewModel.swift in Sources */,
+				C5FBA39E2C5CBFCE00FFD636 /* Planet+Info.swift in Sources */,
 				C5FBA36C2C5CB7E700FFD636 /* ContentView.swift in Sources */,
 				C5FBA36A2C5CB7E700FFD636 /* SolarSystemUsingSceneKitApp.swift in Sources */,
+				C5FBA3992C5CBF9400FFD636 /* ColorPalette.swift in Sources */,
+				C5FBA3A22C5CC19100FFD636 /* ProgressViewWithBackgroundStyle.swift in Sources */,
+				C5FBA39C2C5CBFBC00FFD636 /* Planet.swift in Sources */,
+				C5FBA3A02C5CC12F00FFD636 /* SolarButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
