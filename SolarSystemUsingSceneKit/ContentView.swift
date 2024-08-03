@@ -20,7 +20,13 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            ColorPalette.secondary.ignoresSafeArea()
+            SceneView(
+                scene: scene,
+                pointOfView: setUpCamera(planet: viewModel.selectedPlanet),
+                options: [.allowsCameraControl]
+            )
+            .background(ColorPalette.secondary)
+            .edgesIgnoringSafeArea(.all)
             
             VStack {
                 if let planet = viewModel.selectedPlanet {
