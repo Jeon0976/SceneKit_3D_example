@@ -13,7 +13,29 @@ struct ContentView: View {
     
     static func makeScene() -> SCNScene? {
         let scene = SCNScene(named: "Solar Scene.scn")
+        
+        applyTextures(to: scene)
+        
         return scene
+    }
+    
+    static func applyTextures(to scene: SCNScene?) {
+        for planet in Planet.allCases {
+            let identifier = planet.rawValue
+            
+            let node = scene?.rootNode.childNode(
+                withName: identifier,
+                recursively: false
+            )
+            
+            let texture = UIImage(named: identifier)
+            
+            node?.geometry?.firstMaterial?.diffuse.contents = texture
+            
+            let skyboxImages = (1...6).map { UIImage(named: "skybox\($0)")}
+            
+            scene?.background.contents = skyboxImages
+        }
     }
     
     var scene = makeScene()
@@ -23,7 +45,7 @@ struct ContentView: View {
             SceneView(
                 scene: scene,
                 pointOfView: setUpCamera(planet: viewModel.selectedPlanet),
-                options: [.allowsCameraControl]
+                options: viewModel.selectedPlanet == nil ? [.allowsCameraControl] : []
             )
             .background(ColorPalette.secondary)
             .edgesIgnoringSafeArea(.all)
@@ -75,7 +97,28 @@ struct ContentView: View {
         let cameraNode = scene?.rootNode
             .childNode(withName: "camera", recursively: false)
         
+        if let planetNode = planet.flatMap(planetNode(planet:)) {
+            let constraint = SCNLookAtConstraint(target: planetNode)
+            cameraNode?.constraints = [constraint]
+            
+            let globalPosition = planetNode.convertPosition(
+                SCNVector3(x: 50, y: 10, z: 0),
+                to: nil
+            )
+            
+            let move = SCNAction.move(to: globalPosition, duration: 1.0)
+            
+            cameraNode?.runAction(move)
+        }
+        
         return cameraNode
+    }
+    
+    private func planetNode(planet: Planet) -> SCNNode? {
+        scene?.rootNode.childNode(
+            withName: planet.rawValue,
+            recursively: false
+        )
     }
 }
 
